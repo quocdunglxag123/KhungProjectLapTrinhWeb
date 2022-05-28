@@ -1,0 +1,422 @@
+/*Css viewcontent*/
+.container-viewcontent {
+	display: flex;
+}
+
+/*Css viewcontents*/
+.viewcontents-container {
+	height: 5%;
+}
+
+.viewcontents-container i {
+	padding-left: 3%;
+	padding-top: 2.5%;
+	margin-right: 10px;
+}
+
+.viewcontents-container a {
+	color: blue;
+	padding-top: 2.5%;
+	text-decoration: none;
+}
+
+.viewcontents-container:hover {
+	background-color: rgb(245, 245, 245);
+}
+/*Css main*/
+.row-main {
+	width: 100%;
+}
+
+.row-main hr {
+	border-color: rgb(242, 242, 242);
+	width: 100%;
+}
+/*Css table-main*/
+.table-main, .td-main, .th-main {
+	border: 1px solid black;
+}
+
+.th-main {
+	text-align: unset;
+	background-color: rgb(245, 245, 245);;
+	font-size: 150%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	padding-left: 1%;
+	font-weight: lighter;
+}
+.box-superset{
+
+
+}
+.td-main {
+	padding: 1%;
+}
+
+.table-main {
+	width: 95%;
+	border-collapse: collapse;
+}
+/*Css table-son*/
+.table-son, .td-son, .th-son {
+	border: 1px solid black;
+}
+
+.table-son {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+
+.th-son {
+	text-align: unset;
+}
+
+
+
+.table-son .tr-son:nth-child(odd) {
+	background-color: rgb(245, 245, 245);
+}
+
+.table-son .tr-son:nth-child(even) {
+	background-color: white;
+}
+
+.table-son .tr-son:nth-child(1) {
+	background-color: white;
+}
+
+/* Next and Previous */
+.nextprevious {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
+}
+
+.nextprevious:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.previous {
+	background-color: #f1f1f1;
+	color: black;
+}
+
+.next {
+	background-color: #04AA6D;
+	color: white;
+}
+
+.round {
+	border-radius: 50%;
+}
+
+.nextpreviouscancel {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 16px;
+	opacity: 0.5;
+}
+
+.nextpreviouscacel:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/*Layout*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+	
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+aside {
+	float: left;
+	width: 16%;
+	border: 1px solid lightgrey;
+	height:100vh;
+	min-height: 500px;
+	background-color: rgb(242, 242, 242);
+}
+
+section {
+	float: left;
+	width: 80%;
+	/* border: 1px solid lightgrey; */
+	padding: 10px; 
+	min-height: 573px;
+}
+
+@media screen and (max-width: 500px) {
+    aside {
+    	width: 100%;
+    }
+    section {
+    	width: 100%;
+    }
+}
+
+
+
+
+/*Header*/
+/*DropMenu*/
+.dropbtn {
+	color: black;
+	font-size: 12px;
+	border: none;
+	cursor: pointer;
+	margin-top: 18px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	padding-right: 1%;
+	width: 50%;
+	text-align: right;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	right: 0;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	text-align: left;
+	 border: 2px solid RGB(220,220,220);
+	 margin-right: 12px;
+}
+
+.dropdown-menu a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-menu a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	color: blue;
+	background-color: gainsboro;
+}
+/*Css*/
+.container-Header { background-color:rgb(242, 242, 242);
+
+}
+
+.container-Header .row {
+	display: flex;
+	justify-content: space-between;
+	height:62px;
+}
+
+.logocms {
+	padding-left: 0.5%;
+	width: 50%;
+}
+
+h1.cms {
+    font-size: 26px;
+    margin-top: 18px;
+    color: gray;
+    margin-left: 12px;
+}
+h1.people {
+    font-size: 20px;
+    margin-bottom: 21px;
+}
+.dropdown-menu a i {
+	margin-right: 10px;
+}
+
+
+
+
+/*Menu*/
+* {
+	box-sizing: border-box;
+    margin: 0;
+}
+
+
+nav.navbar {
+
+    width: 100%;
+    background-color: rgb(248 248 248);
+    height: 40px;
+}
+
+p {
+    padding: 12px;
+}
+
+hr {
+    border: 1px solid rgb(240 240 240);
+}
+
+hr.hr {
+    width: 300px;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+
+    display: flex;
+    overflow: hidden;
+    background-color: rgb(248 248 248);
+    width: 100%;
+}
+
+.search-button  {
+    width: 40px;
+    height: 35px;
+    background: none;
+    border: none;
+    border: 2px solid rgb(240 240 240);
+    margin: 11px 10px 10px -12px;
+    background-color: white;
+} 
+
+.topnav a {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+
+.topnav .search-container {
+	float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin: 10px;
+    font-size: 17px;
+    width: 80%;
+    border: 2px solid rgb(240 240 240);
+}
+
+.topnav .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	cursor: pointer;
+}
+.topnav .search-button:hover{
+ background-color: #f1f1f1;
+}
+
+form {
+    width: 100%;
+    border: 2px solid rgb(240 240 240);
+}
+
+.menu {
+    background-color: rgb(248 248 248);
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(84 150 202);
+   /*  width: 90%; */
+}
+a:hover
+{
+background-color: #f1f1f1;
+}
+.menu:hover {
+   background-color: #f1f1f1;
+}
+
+i.fa.fa-table {
+    margin: 10px -15px 12px 12px;
+    color: rgb(84 150 202);
+    width: 10%;
+}
+
+i.fas.fa-edit {
+    margin: 10px -15px 12px 12px;
+    color: rgb(84 150 202);
+    width: 10%;
+}
+
+.emplty {
+    height: 400px;
+    background-color: rgb(248 248 248);
+}
+
+
+ @media screen and (min-width: 1280px) {
+    /* laptop and desktop */
+    form{
+        width:20%;
+    }
+}
+
+@media screen and (min-width: 700px){
+    /* tablet and mobile */
+    form{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    form{
+        width: 100%;
+    }
+}
+
+/* @media screen and (min-width: 482px){
+    form{
+        width: 100%;
+    }
+} */
+
+@media screen and (max-width: 500px){
+  
+    form{
+        width: min-content;
+    }
+    .emplty{
+        height: 100px;
+    }
+}
+ 

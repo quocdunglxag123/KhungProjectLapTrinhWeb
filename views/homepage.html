@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+<link href="../css/layoutcss.css" rel="stylesheet" type="text/css">
+<link href="../js/layoutjs.js"  rel="stylesheet" type="text/Javascript">
+<link href="../css/homepagecss.css" rel="stylesheet" type="text/css">
+<link href="../js/homepagejs.js"  rel="stylesheet" type="text/Javascript">
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script>
+$(function(){
+	$("#header").load("header.html"); 
+	$("#menu").load("menu.html"); 
+  });
+</script>
+</head>
+<body class="preloading">
+    <div id="header"></div>
+    <div id="menu"></div>
+	<div class="row">
+		<section>
+			<div class="container-viewcontent">
+                <div class="row-main">
+                    <h1 style="margin-top: 2%;">View Employee</h1>
+                    <hr />
+                    <!--message-->
+                    <p style="margin: 0; padding: 0; color: red; font-size: x-large"></p>
+                    <br />
+                    <table class="table-main">
+                        <tr class="tr-main">
+                            <th class="th-main">View Employee List</th>
+                        </tr>
+                        <tr class="tr-main">
+                            <td class="td-main"><table class="table-son">
+                                    <tr class="tr-son">
+                                        <th class="th-son">#</th>
+                                        <th class="th-son">UID</th>
+                                        <th class="th-son">EmpName</th>
+                                        <th class="th-son">UserName</th>
+                                        <th class="th-son">Password</th>
+                                        <th class="th-son">Email</th>
+                                        <th class="th-son">EmpRole</th>
+                                    </tr>
+                                  
+                                        <tr class="tr-son">
+                                            <td class="td-son"></td>
+                                            <td class="td-son"></td>
+                                            <td class="td-son"></td>
+                                            <td class="td-son"></td>
+                                            <td class="td-son"></td>
+                                            <td class="td-son"></td>
+                                            <td class="td-son"><a
+                                                href="#"
+                                                style="margin-right: 20px">Edit</a><a
+                                                href="#">Delete</a></td>
+                                        </tr>
+                                    
+                                </table></td>
+                        </tr>
+                    </table>
+        
+                    <c:if test="${start>0}">
+                        <a class="nextprevious" href="viewcontent.tiles?start=${start-10}"
+                            class="previous">&laquo; Previous</a>
+        
+                    </c:if>
+                    <c:if test="${start<=0}">
+                        <p class="nextpreviouscancel">&laquo; Previous</p>
+                    </c:if>
+                    <a class="nextprevious" href="?start=0">1</a>
+                    <c:if test="${end%10!=0}">
+                        <c:forEach var="size" begin="2" end="${(end/10)+1}">
+                            <a class="nextprevious"
+                                href="?start=${((size-1)*10)}">${size}</a>
+                        </c:forEach>
+                    </c:if>
+                    
+                    
+                    <c:if test="${end%10==0}">
+                        <c:forEach var="size" begin="2" end="${(end/10)}">
+                            <a class="nextprevious"
+                                href="?start=${((size-1)*10)}">${size}</a>
+                        </c:forEach>
+                    </c:if>
+        
+        
+                    <c:if test="${start <=end-11}">
+                        <a class="nextprevious" href="?start=${start+10}"
+                            class="next">Next &raquo;</a>
+                    </c:if>
+                    <c:if test="${start>end-11}">
+                        <p class="nextpreviouscancel">Next &raquo;</p>
+                    </c:if>
+        
+                </div>
+            </div>
+		</section>
+	</div>
+</body>
+</body>
+</html>

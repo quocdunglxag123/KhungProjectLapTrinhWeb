@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header {
+      
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  
+  aside {
+      float: left;
+      width: 16%;
+      border: 1px solid lightgrey;
+      height:100vh;
+      min-height: 500px;
+      background-color: rgb(242, 242, 242);
+  }
+  
+  section {
+      float: left;
+      width: 80%;
+      /* border: 1px solid lightgrey; */
+      padding: 10px; 
+      min-height: 573px;
+  }
+  
+  @media screen and (max-width: 500px) {
+      aside {
+          width: 100%;
+      }
+      section {
+          width: 100%;
+      }
+  }
+  
